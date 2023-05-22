@@ -3,7 +3,7 @@ session_start();
 
 // db configs
 try {
-  $db = new PDO('mysql:host=localhost;dbname=test_todo', 'lamp', 'Adex@321');
+  $db = new PDO('mysql:host=localhost;dbname=test_todo', 'lamp', 'nepal123');
   $db->setAttribute(PDO::ATTR_ERRMODE, PDO::ERRMODE_EXCEPTION);
   } catch (PDOException $e) {
   echo $e->getMessage();
