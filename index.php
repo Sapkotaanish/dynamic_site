@@ -1,9 +1,13 @@
 <?php
 session_start();
 
+$mysql_host='mysql_host_to_replace';
+$mysql_db='mysql_database_name_to_replace';
+$mysql_user='mysql_user_to_replace';
+$mysql_password='mysql_password_to_replace';
 // db configs
 try {
-  $db = new PDO('mysql:host=localhost;dbname=test_todo', 'lamp', 'nepal123');
+  $db = new PDO("mysql:host='$mysql_host';dbname='$mysql_db'", $mysql_user, $mysql_password);
   $db->setAttribute(PDO::ATTR_ERRMODE, PDO::ERRMODE_EXCEPTION);
   } catch (PDOException $e) {
   echo $e->getMessage();
