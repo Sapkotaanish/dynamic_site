@@ -7,7 +7,7 @@ $mysql_user='mysql_user_to_replace';
 $mysql_password='mysql_password_to_replace';
 // db configs
 try {
-  $db = new PDO("mysql:host='$mysql_host';dbname='$mysql_db'", $mysql_user, $mysql_password);
+  $db = new PDO("mysql:host=$mysql_host;dbname=$mysql_db", $mysql_user, $mysql_password);
   $db->setAttribute(PDO::ATTR_ERRMODE, PDO::ERRMODE_EXCEPTION);
   } catch (PDOException $e) {
   echo $e->getMessage();
